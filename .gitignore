@@ -102,3 +102,17 @@ dist
 
 # TernJS port file
 .tern-port
+
+# PlayCanvas
+playcanvas.json
+.pcconfig
+pcconfig.json
+
+# PlayCanvas libs
+src/Ammo
+src/Basis
+src/Photon
+src/scripts/first-person-camera.js
+
+# build temporary
+build
