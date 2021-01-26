@@ -47,13 +47,16 @@ const css = () => {
 
 //jsの結合
 const concatjs = async () => {
-  const assetList = await (new PlayCanvasNode( pcOptions )).getListAssets();
+  const order = require('./photon_test/config.json').application_properties.scripts;
+  const node = new PlayCanvasNode( pcOptions );
+  const assetList = await node.getListAssets();
   // アセット情報からディレクトリパスを取得
-  function _getPath( asset ){
+  async function _getPath( asset ){
     let path = asset.name;
     let parentId = asset.parent;
     while( parentId ){
       let _asset = assetList.find( x => x.id === parentId );
+
       path = `${_asset.name}/${path}`;
       parentId = _asset.parent;
     }
@@ -61,7 +64,7 @@ const concatjs = async () => {
     return path;
   }
 
-  let concatFiles = assetList.filter( x => x.type === 'script' && x.preload === true ).map( y => 'src/' + _getPath(y) );
+  let concatFiles = await Promise.all( order.map( async x => 'src/' + await _getPath( assetList.find( y => y.id === x )) ) );
   return gulp.src(concatFiles)
     .pipe(concat('index.js'))
     .pipe(gulp.dest('build/'));
