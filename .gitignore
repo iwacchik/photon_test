@@ -116,3 +116,6 @@ src/scripts/first-person-camera.js
 
 # build temporary
 build
+
+# temporary
+temp

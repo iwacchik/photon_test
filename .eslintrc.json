@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "no-unused-vars": 1,
+    "camelcase": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "es2020": true
+  }
+}
