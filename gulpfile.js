@@ -45,7 +45,7 @@ const css = () => {
 
 //jsの結合
 const concatjs = async () => {
-  const order = require('./photon_test/config.json').application_properties
+  const order = require('./dist/photon_test/config.json').application_properties
     .scripts;
   const node = new PlayCanvasNode(pcOptions);
   const assetList = await node.getListAssets();

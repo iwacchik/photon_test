@@ -7,6 +7,7 @@
   "author": "iwacchi_k",
   "devDependencies": {
     "@playcanvas/jsdoc-template": "^1.0.15",
+    "@playcanvas/pcui": "^1.1.15",
     "@rollup/plugin-replace": "^2.3.4",
     "@rollup/pluginutils": "^4.1.0",
     "eslint": "^7.17.0",
