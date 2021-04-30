@@ -4,7 +4,7 @@
     },
     "include": [
         "./src/**/*",
-        "./temp/pcui.d.ts"
+        "./dist/pcui.d.ts"
 
     ],
     "exclude": [
