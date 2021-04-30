@@ -18,7 +18,7 @@
     "gulp-playcanvas": "^2.0.1",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.1.0",
-    "husky": "^6.0.0",
+    "husky": "4.2.5",
     "js2xmlparser": "^4.0.1",
     "jsdoc": "^3.6.6",
     "lint-staged": "^10.5.4",
