@@ -1,0 +1,3 @@
+[submodule "src/scripts/common"]
+	path = src/scripts/common
+	url = git@github.com:iwacchik/playcanvas-common-scripts.git
